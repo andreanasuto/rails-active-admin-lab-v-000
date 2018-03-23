@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :songs
 
   get '/artists/new', to: 'artists#show', id: "new"
-  get '/artists/edit', to: 'artists#show'
+  get '/artists/edit', to: 'artists#show', id: "edit"
 
   get '/songs/new', to: 'songs#show'
   get '/songs/edit', to: 'songs#show'
