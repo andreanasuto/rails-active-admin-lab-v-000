@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   resources :artists, :songs
-  
+
   get '/artists/new', to: 'artists#show'
-  
+  get '/artists/edit', to: 'artists#show'
+
+  get '/songs/new', to: 'songs#show'
+  get '/songs/edit', to: 'songs#show'
+
   root to: 'artists#index'
 end
