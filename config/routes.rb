@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   get '/artists/new', to: 'artists#show', id: "new"
   get '/artists/edit', to: 'artists#show', id: "edit"
 
-  get '/songs/new', to: 'songs#show'
-  get '/songs/edit', to: 'songs#show'
+  get '/songs/new', to: 'songs#show', id: "new"
+  get '/songs/edit', to: 'songs#show', id: "edit"
+  
 
   root to: 'artists#index'
 end
