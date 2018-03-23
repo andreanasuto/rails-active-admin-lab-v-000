@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   resources :artists, :except => [:create, :update, :show, :destroy]
-  :songs
+  resources :songs
 
   get '/artists/new', to: 'artists#show', id: "new
   get '/artists/edit', to: 'artists#show'
