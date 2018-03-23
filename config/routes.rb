@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
-  resources :songs
 
   get '/artists/new', to: 'artists#show', id: "new"
   get '/artists/edit', to: 'artists#show', id: "edit"
